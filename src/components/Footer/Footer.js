@@ -1,18 +1,7 @@
 import React from 'react';
-import ReactGA from 'react-ga';
+import { openLink } from '../../utils/ga';
 
 import './Footer.scss';
-
-const sendEmailToNivas = props => {
-    ReactGA.event({
-        category: 'click',
-        action: 'email',
-        label: 'nivasdevelopers@hotmail.com'
-    });
-
-    var emailLink = 'mailto:nivasdevelopers@hotmail.com';
-    window.open(emailLink);
-};
 
 const Footer = props => (
     <footer>
@@ -26,12 +15,35 @@ const Footer = props => (
                             alt="Nivas Developers"
                         />
                         <br /> Nivas Developers
-                        <br /> H.No.1-9-312&#x2F;2 &amp; 1-9-321&#x2F;2A
+                        <br />{' '}
+                        <span
+                            onClick={evt =>
+                                openLink({
+                                    evt,
+                                    href:
+                                        'https://goo.gl/maps/SdTXtpSDunN5YGQv8',
+                                    action: 'Google Maps'
+                                })
+                            }
+                            className="link"
+                            rel="noopener noreferrer"
+                        >
+                            H.No.1-9-312&#x2F;2 &amp; 1-9-321&#x2F;2A
+                        </span>
                         <br /> Hyderabad, Telangana,
                         <br /> India - 500044
                         <br /> Tel: +91 (996) 643-0011
                         <br /> E-mail:{' '}
-                        <span onClick={sendEmailToNivas} className="link">
+                        <span
+                            onClick={evt =>
+                                openLink({
+                                    evt,
+                                    href: 'mailto:nivasdevelopers@hotmail.com',
+                                    action: 'email'
+                                })
+                            }
+                            className="link"
+                        >
                             nivasdevelopers@hotmail.com
                         </span>
                         <br />

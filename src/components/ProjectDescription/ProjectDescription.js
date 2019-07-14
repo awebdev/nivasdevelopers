@@ -1,5 +1,5 @@
 import React from 'react';
-import PoolImg from './assets/pool-3d-view.jpg';
+import Img from '../Img/Img';
 
 export const ProjectDescription = () => (
     <div className="row">
@@ -12,9 +12,10 @@ export const ProjectDescription = () => (
                 <hr />
                 <div className="row">
                     <div className="col-lg-4">
-                        <img
+                        <Img
                             className="img-responsive img-full"
-                            src={PoolImg}
+                            src="/assets/pool-3d-view"
+                            ext="jpg"
                             alt="Swimming pool"
                         />
                     </div>

@@ -1,11 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
-const assets = [
-    '/assets/carousel/02.jpg',
-    '/assets/carousel/03.jpg',
-    '/assets/carousel/04.jpg'
-];
+import Img from '../Img/Img';
 
 const ControlledCarousel = props => {
     const slideInterval = 5000;
@@ -13,24 +9,27 @@ const ControlledCarousel = props => {
     return (
         <Carousel interval={slideInterval}>
             <Carousel.Item>
-                <img
+                <Img
                     className="img-responsive img-full col-lg-12"
                     alt="Property feature"
-                    src={assets[0]}
+                    src="/assets/carousel/02"
+                    ext="jpg"
                 />
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                <Img
                     className="img-responsive img-full col-lg-12"
                     alt="Property feature"
-                    src={assets[1]}
+                    src="/assets/carousel/03"
+                    ext="jpg"
                 />
             </Carousel.Item>
             <Carousel.Item>
-                <img
+                <Img
                     className="img-responsive img-full col-lg-12"
                     alt="Property feature"
-                    src={assets[2]}
+                    src="/assets/carousel/04"
+                    ext="jpg"
                 />
             </Carousel.Item>
         </Carousel>
