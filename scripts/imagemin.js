@@ -5,7 +5,10 @@ const imageminWebp = require('imagemin-webp');
 const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 
-const assetSources = ['src/assets/**/*.{jpg,jpeg,png}'];
+const assetSources = [
+    'src/assets/**/*.{jpg,jpeg,png}',
+    'public/assets/**/*.{jpg,jpeg,png}'
+];
 
 function convertImageToWebp(props) {
     return imagemin([props.src], props.dest, {
@@ -25,7 +28,7 @@ function convertImageToJpgOrPng(props) {
 }
 
 function convertImageToSupportedFormats(src) {
-    const dest = path.parse(src).dir.replace('src', 'public');
+    const dest = path.parse(src).dir.replace(/(src\/|public\/)/gi, 'build/');
 
     convertImageToWebp({
         src,
