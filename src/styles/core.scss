@@ -1,0 +1,45 @@
+@import 'base';
+@import '~normalize.css/normalize';
+
+$path-public: '../';
+
+// Import public Libraries
+@import 'libs/business-casual';
+
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: url($path-public+'assets/bricks.jpg') center center no-repeat
+        fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.link {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
