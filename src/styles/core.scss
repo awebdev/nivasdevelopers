@@ -1,8 +1,6 @@
 @import 'base';
 @import '~normalize.css/normalize';
 
-$path-public: '../';
-
 // Import public Libraries
 @import 'libs/business-casual';
 
@@ -21,8 +19,7 @@ body {
 
 body {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: url($path-public+'assets/bricks.jpg') center center no-repeat
-        fixed;
+    background: url('/assets/bricks.jpg') center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

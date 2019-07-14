@@ -1,0 +1,10 @@
+title: Nivas Developers
+email: nivasdevelopers@hotmai.com
+baseurl: ''
+
+url: 'https://nivasdevelopers.com'
+github_username: awebdev
+author: Anudeep Potlapally
+
+gems:
+    - jekyll-seo-tag

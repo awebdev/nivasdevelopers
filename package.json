@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "compress-images": "node scripts/imagemin.js",
-    "build": "npm run compress-images; react-scripts build",
+    "build": "react-scripts build; npm run compress-images",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
