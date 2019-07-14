@@ -1,4 +1,5 @@
 import React from 'react';
+import { openLink } from '../../utils/ga';
 
 const BookingsInformation = props => (
     <div className="row box">
@@ -9,12 +10,19 @@ const BookingsInformation = props => (
 
             <p className="text-center">
                 See{' '}
-                <a
-                    href="assets/docs/Golden-Palms-Brochure-0816.pdf"
-                    target="_blank"
+                <span
+                    onClick={evt =>
+                        openLink({
+                            evt,
+                            href: '/assets/docs/Golden-Palms-Brochure-0816.pdf',
+                            action: 'brochure'
+                        })
+                    }
+                    className="link"
+                    rel="noopener noreferrer"
                 >
                     brochure
-                </a>{' '}
+                </span>{' '}
                 or contact us for more details
             </p>
         </div>
