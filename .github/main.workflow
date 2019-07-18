@@ -22,7 +22,7 @@ action "build" {
 
 action "deploy" {
   needs = "build"
-  uses = "apotlapally/actions-gh-pages@v1.0.1"
+  uses = "peaceiris/actions-gh-pages@v1.0.1"
   env = {
     PUBLISH_BRANCH = "gh-pages"
     PUBLISH_DIR = "./build"
