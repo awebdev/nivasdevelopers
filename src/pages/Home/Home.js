@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+
+import Loading from "../../components/Loading";
 import MainCarousel from '../../components/MainCarousel';
 import ProjectDescription from '../../components/ProjectDescription';
 import ProjectHighlights from '../../components/ProjectHighlights';
@@ -6,7 +8,7 @@ import BookingInformation from '../../components/BookingInformation';
 import Footer from '../../components/Footer';
 
 export const HomeView = () => (
-    <React.Fragment>
+    <Suspense fallback={Loading}>
         <div className="container" style={{ padding: '10px' }}>
             <MainCarousel />
             <ProjectDescription />
@@ -14,7 +16,7 @@ export const HomeView = () => (
             <BookingInformation />
         </div>
         <Footer />
-    </React.Fragment>
+    </Suspense>
 );
 
 export default HomeView;
