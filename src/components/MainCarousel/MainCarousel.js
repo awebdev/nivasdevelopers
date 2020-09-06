@@ -1,5 +1,6 @@
-import React from 'react';
-import Carousel from '../Carousel';
+import React, { lazy } from 'react';
+
+const Carousel = lazy(() => import('../Carousel'));
 
 export const MainCarousel = () => (
     <div className="row">
