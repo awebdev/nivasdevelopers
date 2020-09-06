@@ -2,19 +2,6 @@
   "name": "nivasdevelopers-react",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "imagemin": "^6.1.0",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-pngquant": "^8.0.0",
-    "imagemin-webp": "^5.1.0",
-    "node-sass": "^4.12.0",
-    "normalize.css": "^8.0.1",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
-  },
   "scripts": {
     "start": "react-scripts start",
     "compress-images": "node scripts/imagemin.js",
@@ -38,7 +25,18 @@
     ]
   },
   "devDependencies": {
+    "bootstrap": "^4.5.2",
+    "imagemin": "^6.1.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-webp": "^5.1.0",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.3",
     "glob": "^7.1.4",
-    "gulp-responsive": "^2.14.0"
+    "gulp-responsive": "^3.0.1"
   }
 }
