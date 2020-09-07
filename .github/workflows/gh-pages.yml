@@ -2,9 +2,9 @@ name: github pages
 
 on:
   push:
-    branches: [ master, fix-actions-deploy ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, fix-actions-deploy ]
+    branches: [ master ]
 
 jobs:
   deploy:
